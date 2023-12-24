@@ -10,6 +10,7 @@ public class Equipment {
 
 
     private void initialize(){
+
         equipment.put("Head",null);
         equipment.put("Torso",null);
         equipment.put("Hands",null);
@@ -19,8 +20,9 @@ public class Equipment {
     }
 
     public Equipment(){
-        initialize();
+
         this.equipment= new HashMap<>();
+        initialize();
     }
 
     public void equip(String bodyElement,Item item){

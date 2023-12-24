@@ -3,7 +3,7 @@ package org.example.Scenes;
 import org.example.CharacterRelated.Player;
 import org.example.InventoryRelated.Item;
 
-public class InventoryPage {
+public class InventoryPage implements ConsolePages {
 
 
     Player player ;

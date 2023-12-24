@@ -2,7 +2,7 @@ package org.example.Scenes;
 
 import org.example.CharacterRelated.Player;
 
-public class StatusPage {
+public class StatusPage implements ConsolePages {
 
     Player player ;
 
