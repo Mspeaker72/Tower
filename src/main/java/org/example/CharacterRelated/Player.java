@@ -11,11 +11,14 @@ public class Player implements Character {
 
     private Inventory inventory;
 
+    private Equipment equipment;
+
 
     public Player(Gender gender ,Stats stats){
         this.playerGender = gender;
         this.stats = stats;
         this.inventory = new Inventory();
+        this.equipment = new Equipment();
     }
     @Override
     public Gender getgender() {
@@ -30,5 +33,10 @@ public class Player implements Character {
     @Override
     public Inventory getInventory() {
         return this.inventory;
+    }
+
+    @Override
+    public Equipment getEquipment() {
+        return this.equipment;
     }
 }

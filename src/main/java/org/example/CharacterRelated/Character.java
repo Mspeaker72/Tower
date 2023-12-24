@@ -8,4 +8,6 @@ public interface Character {
 
    Inventory getInventory();
 
+   Equipment getEquipment();
+
 }
