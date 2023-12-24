@@ -6,4 +6,6 @@ public interface Character {
 
    Stats getStats();
 
+   Inventory getInventory();
+
 }

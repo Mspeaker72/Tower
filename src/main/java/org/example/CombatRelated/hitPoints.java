@@ -1,5 +1,7 @@
 package org.example.CombatRelated;
 
+import org.example.InventoryRelated.Potion;
+
 public class hitPoints {
 
     private int Hp;
@@ -16,6 +18,10 @@ public class hitPoints {
 
     public int getMaxHp() {
         return MaxHp;
+    }
+
+    public void Heal(Potion potion){
+        this.Hp+=potion.getStrength();
     }
 
     public hitPoints(){

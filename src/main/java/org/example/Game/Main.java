@@ -7,6 +7,7 @@ import org.example.CombatRelated.defensiveRating;
 import org.example.CombatRelated.hitPoints;
 import org.example.CombatRelated.offenseRating;
 import org.example.CombatRelated.playerLevel;
+import org.example.Scenes.InventoryPage;
 import org.example.Scenes.StatusPage;
 
 public class Main {
@@ -23,9 +24,12 @@ public class Main {
 
         Player player = new Player(gender,newPlayer);
 
-        StatusPage statusPage = new StatusPage(player);
+//        StatusPage statusPage = new StatusPage(player);
+//
+//        statusPage.displayPage();
 
-        statusPage.displayPage();
+        InventoryPage inventoryPage = new InventoryPage(player);
+        inventoryPage.displayPage();
 
 
         }
