@@ -14,7 +14,6 @@ public class Main {
     public static void main(String[] args) {
 
         Gender gender = new Gender("M");
-
         playerLevel playerLevel = new playerLevel();
         offenseRating offenseRating = new offenseRating();
         hitPoints hitPoints = new hitPoints();
@@ -24,9 +23,9 @@ public class Main {
 
         Player player = new Player(gender,newPlayer);
 
-//        StatusPage statusPage = new StatusPage(player);
-//
-//        statusPage.displayPage();
+        StatusPage statusPage = new StatusPage(player);
+
+        statusPage.displayPage();
 
         InventoryPage inventoryPage = new InventoryPage(player);
         inventoryPage.displayPage();
