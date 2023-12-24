@@ -9,8 +9,12 @@ public class window {
             JFrame f=new JFrame("Tower");//creating instance of JFrame
             //like the main board to add elements
 
-            JTextField output = new JTextField();
+            JTextField output = new JTextField(2);
             output.setBounds(130,40,100,40);
+            output.setEditable(false);
+            //perfect for stats
+
+//            (new ImageIcon("D:\\icon.png") should it be an image for a button
 
 
             JButton inventory=new JButton("Inventory");//creating instance of JButton
@@ -21,10 +25,15 @@ public class window {
 
             JButton equipment=new JButton("Equipment");
             equipment.setBounds(130,220,100,40);
-            equipment.addActionListener(new ActionListener() {
+            Status.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    output.setText("Equipment");
+                    output.setText("HP: 25/25 ");
+                    f.remove(inventory);
+                    f.remove(equipment);
+                    f.remove(Status);
+                    f.repaint();
+                    //allows one to refresh Jframe
                 }
             });
             f.add(output);
