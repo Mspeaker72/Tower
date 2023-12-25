@@ -27,8 +27,8 @@ public class Main {
 
         statusPage.displayPage();
 
-        InventoryPage inventoryPage = new InventoryPage(player);
-        inventoryPage.displayPage();
+//        InventoryPage inventoryPage = new InventoryPage(player);
+//        inventoryPage.displayPage();
 
 
         }
