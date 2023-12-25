@@ -1,4 +1,4 @@
-package org.example.Extra;
+package org.example.Menus;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,6 +33,7 @@ public class window {
                     f.remove(equipment);
                     f.remove(Status);
                     f.repaint();
+
                     //allows one to refresh Jframe
                 }
             });
