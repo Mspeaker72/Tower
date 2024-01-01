@@ -21,6 +21,7 @@ public class Potion implements Item{
 
     public Potion(int amount){
         this.quantity=amount;
+        this.name = "Potion";
     }
 
     @Override

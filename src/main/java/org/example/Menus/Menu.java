@@ -1,10 +1,12 @@
 package org.example.Menus;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class Menu {
 
     private JFrame jFrame;
+    private JTable inventoryMenu ;
 
 
 
@@ -22,6 +24,16 @@ public class Menu {
         jFrame.setLayout(null);//using no layout managers
         jFrame.setVisible(true);//making the frame visible
     }
+    public void table(String [] column, String[][] data){
+        inventoryMenu=new JTable(data,column);
+        inventoryMenu.setBounds(30,40,100,20);
+        JScrollPane sp=new JScrollPane(inventoryMenu);
+        jFrame.add(sp);
+        jFrame.setSize(400,500);//400 width and 500 height
+        jFrame.setVisible(true);//making the frame visible
+
+    }
+
 
     public void addTextElement(JTextField jTextField,String text ,int x,int y,int width ,int height){
         jTextField.setText(text);

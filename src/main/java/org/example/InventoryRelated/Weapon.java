@@ -3,9 +3,23 @@ package org.example.InventoryRelated;
 import org.example.CharacterRelated.Player;
 
 public class Weapon implements Item{
+
+    private int quantity;
+
+    private int strength;
+
+    private String name;
+
+    public Weapon(String name,int strength){
+        this.name =name;
+        this.strength = strength;
+        quantity= 1;
+
+    }
+
     @Override
     public int getQuantity() {
-        return 0;
+        return this.quantity;
     }
 
     @Override
@@ -25,6 +39,6 @@ public class Weapon implements Item{
 
     @Override
     public String DisplayString() {
-        return null;
+        return this.name;
     }
 }

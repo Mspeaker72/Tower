@@ -23,12 +23,12 @@ public class Main {
 
         Player player = new Player(gender,newPlayer);
 
-        StatusPage statusPage = new StatusPage(player);
+//        StatusPage statusPage = new StatusPage(player);
+//
+//        statusPage.displayPage();
 
-        statusPage.displayPage();
-
-//        InventoryPage inventoryPage = new InventoryPage(player);
-//        inventoryPage.displayPage();
+        InventoryPage inventoryPage = new InventoryPage(player);
+        inventoryPage.displayPage();
 
 
         }
