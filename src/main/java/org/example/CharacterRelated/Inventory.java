@@ -21,4 +21,8 @@ public class Inventory {
     public HashMap<Item, Integer> getInventory() {
         return inventory;
     }
+
+    public void useItem(Item item) {
+        inventory.remove(item);
+    }
 }

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.CharacterRelated;
 
 import org.example.CharacterRelated.Gender;
 import org.junit.jupiter.api.BeforeEach;
