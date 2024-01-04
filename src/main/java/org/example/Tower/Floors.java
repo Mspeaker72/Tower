@@ -20,4 +20,5 @@ public interface Floors {
     public int getCurrentStep();
 
 
+    void next();
 }

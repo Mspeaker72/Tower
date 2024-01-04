@@ -39,5 +39,10 @@ public class Floor implements Floors {
         return currentStep;
     }
 
+    @Override
+    public void next() {
+        currentFloor++;
+    }
+
 
 }
