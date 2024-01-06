@@ -27,7 +27,8 @@ class FloorTest {
 
     @Test
     void getCurrentStep() {
-        assertEquals(floor.getCurrentStep(),0);
+        floor.step(6);
+        assertEquals(floor.getCurrentStep(),6);
     }
 
     @Test

@@ -44,5 +44,9 @@ public class Floor implements Floors {
         currentFloor++;
     }
 
+    public void step(int roll) {
+        currentStep+=roll;
+    }
+
 
 }
