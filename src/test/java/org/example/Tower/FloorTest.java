@@ -1,12 +1,18 @@
 package org.example.Tower;
 
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class FloorTest {
 
-    public Floor floor = new Floor();
+    public Floor floor;
+    @BeforeEach
+     void startup(){
+        floor = new Floor();
+    }
 
     @Test
     void isBossFloor() {
@@ -33,9 +39,20 @@ class FloorTest {
 
     @Test
     void isBossFloorTrue() {
-        for (int i = 0;i<9;i++) {
+        for (int i = 0;i<19;i++) {
             floor.next();
         }
         assertTrue(floor.isBossFloor());
+        System.out.println(floor.getCurrentFloor());
+    }
+
+    @Test
+
+    void StopAtTenthFloor() {
+
+        for (int i = 0;i<20;i++) {
+            floor.step(1);
+        }
+        assertEquals(10, floor.getCurrentStep());
     }
 }

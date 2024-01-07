@@ -45,7 +45,15 @@ public class Floor implements Floors {
     }
 
     public void step(int roll) {
-        currentStep+=roll;
+        int result = currentStep+roll;
+
+        if(result>=floorLength){
+            currentStep= floorLength;
+        }else {
+            currentStep=result;
+        }
+
+
     }
 
 
