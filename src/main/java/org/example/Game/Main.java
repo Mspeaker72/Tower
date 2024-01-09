@@ -13,6 +13,8 @@ import org.example.Scenes.StatusPage;
 public class Main {
     public static void main(String[] args) {
 
+        PlayTower game = new PlayTower();
+
         Gender gender = new Gender("M");
         playerLevel playerLevel = new playerLevel();
         offenseRating offenseRating = new offenseRating();
@@ -23,12 +25,10 @@ public class Main {
 
         Player player = new Player(gender,newPlayer);
 
-//        StatusPage statusPage = new StatusPage(player);
-//
-//        statusPage.displayPage();
+        game.startNewGame();
+        game.buildCharacter();
 
-        InventoryPage inventoryPage = new InventoryPage(player);
-        inventoryPage.displayPage();
+
 
 
         }
