@@ -2,7 +2,11 @@ package org.example.Game;
 
 public class PlayTower implements Play{
 
-    private final Prompts prompts= new Prompts();
+    private final Prompts prompts;
+
+    public PlayTower(){
+        prompts = new Prompts();
+    }
 
     @Override
     public void startNewGame() {
