@@ -12,11 +12,14 @@ public class Tower implements Towers {
 
     private StatusPage statusPage;
 
+    private Dice dice;
+
 
     public Tower(Player player){
         this.player = player;
         this.floor = new Floor();
         this.statusPage = new StatusPage(player);
+        this.dice = new Dice();
     }
 
 
