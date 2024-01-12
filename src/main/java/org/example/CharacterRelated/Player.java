@@ -13,12 +13,15 @@ public class Player implements Character {
 
     private Equipment equipment;
 
+    private String name;
 
-    public Player(Gender gender ,Stats stats){
+
+    public Player(Gender gender ,Stats stats,String name){
         this.playerGender = gender;
         this.stats = stats;
         this.inventory = new Inventory();
         this.equipment = new Equipment();
+        this.name= name;
     }
     @Override
     public Gender getgender() {
@@ -38,5 +41,10 @@ public class Player implements Character {
     @Override
     public Equipment getEquipment() {
         return this.equipment;
+    }
+
+    @Override
+    public String name() {
+        return this.name;
     }
 }

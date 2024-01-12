@@ -10,4 +10,5 @@ public interface Character {
 
    Equipment getEquipment();
 
+    String name();
 }

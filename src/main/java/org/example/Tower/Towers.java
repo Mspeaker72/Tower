@@ -14,6 +14,11 @@ public interface Towers {
 public Floor getFloor();
 
 
-
+public void PlayerStatus();
 
 }
+
+
+
+
+

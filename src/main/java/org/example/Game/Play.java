@@ -11,4 +11,7 @@ start or quit game
 
     public void buildCharacter();
 
+    public Prompts getPrompt();
+
+
 }
