@@ -22,6 +22,14 @@ public class Tower implements Towers {
         this.dice = new Dice();
     }
 
+    public Tower(Player player, Floor floor){
+        this.player = player;
+        this.floor = floor;
+        this.statusPage = new StatusPage(player);
+        this.dice = new Dice();
+
+    }
+
 
     @Override
     public Floor getFloor() {

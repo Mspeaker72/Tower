@@ -7,7 +7,7 @@ There will be a welcome message that prompts the player to
 start or quit game
  */
 
-    public void startNewGame();
+    public String gameState();
 
     public void buildCharacter();
 

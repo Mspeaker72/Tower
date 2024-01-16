@@ -7,17 +7,12 @@ public class Prompts {
     private String name;
     private String genderCode;
 
+    private String State;
+
     private final Scanner scanner = new Scanner(System.in);
     public void greeting(){
-        System.out.println("Please type start to play game or quit to exit");
-        if(scanner.nextLine().equals("start")){
-            System.out.println();
-            System.out.println("Welcome to the Tower");
-            System.out.println();
-
-        }else {
-            System.exit(-1);
-        }
+        System.out.println("Please type start to play game , load to continue or quit to exit");
+        this.State=scanner.nextLine();
     }
 
     public void playerName(){
@@ -37,5 +32,9 @@ public class Prompts {
 
     public String getName() {
         return name;
+    }
+
+    public String getState() {
+        return State;
     }
 }

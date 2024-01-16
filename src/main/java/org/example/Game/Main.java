@@ -17,14 +17,15 @@ public class Main {
 
         PlayTower game = new PlayTower();
 
-
-        game.startNewGame();
-        game.buildCharacter();
-        Tower tower = new Tower(game.initializePlayer());
+        if(game.gameState().equals("quit")){
+            System.exit(0);
+        } else if (game.getPrompt().getState().equals("start")) {
+            game.buildCharacter();
+        }
+//      Constructor will change after saving feature is added
+        Tower tower = new Tower(game.initializePlayer(game.getPrompt().getState()));
         tower.PlayerStatus();
-
-
-
+        // Commands will begin here
 
         }
     }

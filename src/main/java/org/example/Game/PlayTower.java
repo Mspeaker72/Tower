@@ -17,8 +17,10 @@ public class PlayTower implements Play{
     }
 
     @Override
-    public void startNewGame() {
+    public String gameState() {
         prompts.greeting();
+        return prompts.getState();
+
     }
 
     @Override
@@ -27,15 +29,26 @@ public class PlayTower implements Play{
         prompts.playerGender();
     }
 
-    public Player initializePlayer(){
-        Gender gender = new Gender(prompts.getGenderCode());
+    public Player initializePlayer(String state){
+
+        if(state.equals("start")) {
+            Gender gender = new Gender(prompts.getGenderCode());
+            playerLevel playerLevel = new playerLevel();
+            offenseRating offenseRating = new offenseRating();
+            hitPoints hitPoints = new hitPoints();
+            defensiveRating defensiveRating = new defensiveRating();
+            Stats newPlayer = new Stats(playerLevel, hitPoints, offenseRating, defensiveRating);
+
+            return new Player(gender, newPlayer, prompts.getName());
+        }
+        Gender gender = new Gender("F");
         playerLevel playerLevel = new playerLevel();
         offenseRating offenseRating = new offenseRating();
         hitPoints hitPoints = new hitPoints();
         defensiveRating defensiveRating = new defensiveRating();
-        Stats newPlayer = new Stats(playerLevel,hitPoints,offenseRating,defensiveRating);
+        Stats newPlayer = new Stats(playerLevel, hitPoints, offenseRating, defensiveRating);
 
-        return new Player(gender,newPlayer,prompts.getName());
+        return new Player(gender, newPlayer, "Jane Doe");
 
     }
 
