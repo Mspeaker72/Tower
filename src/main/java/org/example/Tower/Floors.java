@@ -19,6 +19,8 @@ public interface Floors {
 
     public int getCurrentStep();
 
+    public void update();
+
 
     public void next();
     public void step(int roll);

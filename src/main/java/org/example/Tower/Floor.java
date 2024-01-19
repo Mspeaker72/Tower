@@ -8,6 +8,8 @@ public class Floor implements Floors {
 
     private final int floorLength = 10;
 
+    private final  int floorStart = 0;
+
 
     public Floor(){
         this.currentFloor = 1;
@@ -40,6 +42,13 @@ public class Floor implements Floors {
     }
 
     @Override
+    public void update() {
+        System.out.println("you are currently on step "
+                +currentStep+" " +
+                "of the "+currentFloor+" floor.");
+    }
+
+    @Override
     public void next() {
         currentFloor++;
     }
@@ -49,7 +58,9 @@ public class Floor implements Floors {
 
         if(result>=floorLength){
             currentStep= floorLength;
-        }else {
+        } else if (result<=floorStart) {
+            currentStep=floorStart;
+        } else {
             currentStep=result;
         }
 

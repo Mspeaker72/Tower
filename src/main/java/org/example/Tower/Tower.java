@@ -15,6 +15,8 @@ public class Tower implements Towers {
     private Dice dice;
 
 
+
+
     public Tower(Player player){
         this.player = player;
         this.floor = new Floor();
@@ -31,13 +33,21 @@ public class Tower implements Towers {
     }
 
 
+
+
     @Override
     public Floor getFloor() {
-        return null;
+        return this.floor;
     }
 
     @Override
     public void PlayerStatus() {
         statusPage.displayPage();
+    }
+
+    @Override
+    public void walk() {
+        this.floor.step( this.dice.rollDice());
+        this.floor.update();
     }
 }

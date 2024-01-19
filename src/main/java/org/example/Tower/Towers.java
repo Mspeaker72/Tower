@@ -16,7 +16,13 @@ public Floor getFloor();
 
 public void PlayerStatus();
 
+
+public void walk();
+
+
 }
+
+
 
 
 

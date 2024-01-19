@@ -1,8 +1,13 @@
 package org.example.Tower;
 
+import org.example.Admin.LoggingTower;
+
+import java.time.LocalDateTime;
 import java.util.Random;
 
 public class Dice {
+
+    private int currentResult;
 
     private final Random random = new Random();
 
@@ -13,7 +18,9 @@ public class Dice {
     }
 
     public int rollDice(){
-        return roll[random.nextInt(4)];
+        currentResult= roll[random.nextInt(4)];
+        LoggingTower.processRollLog(LocalDateTime.now()+" : the current roll is "+currentResult);
+        return currentResult;
     }
 
 

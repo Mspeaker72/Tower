@@ -1,0 +1,8 @@
+2024-01-19T12:32:58.147861900 : the current roll is -1
+2024-01-19T12:32:58.153858900 : the current roll is 1
+2024-01-19T12:32:58.154857700 : the current roll is 0
+2024-01-19T12:32:58.155857800 : the current roll is -1
+2024-01-19T12:32:58.157856100 : the current roll is -2
+2024-01-19T12:32:58.158857 : the current roll is 0
+2024-01-19T12:32:58.159855400 : the current roll is -1
+2024-01-19T12:35:57.236495100 : the current roll is 0

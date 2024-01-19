@@ -26,6 +26,10 @@ public class Main {
         Tower tower = new Tower(game.initializePlayer(game.getPrompt().getState()));
         tower.PlayerStatus();
         // Commands will begin here
+        for(int i = 0;i<=6;i++){
+            tower.walk();
+        }
+
 
         }
     }
