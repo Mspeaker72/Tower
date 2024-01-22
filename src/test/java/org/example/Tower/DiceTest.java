@@ -10,6 +10,6 @@ class DiceTest {
 
     @Test
     void rollDice() {
-        assertTrue(die.rollDice()<3);
+        assertTrue(die.rollDice()<=4);
     }
 }

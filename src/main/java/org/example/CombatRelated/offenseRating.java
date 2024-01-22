@@ -13,5 +13,8 @@ public class offenseRating {
         return offensivePower;
     }
 
-
+    public offenseRating updateOffensivePower(int offensivePower) {
+        this.offensivePower = offensivePower;
+        return this;
+    }
 }

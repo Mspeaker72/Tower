@@ -1,5 +1,7 @@
 package org.example.Game;
 
+import org.example.CharacterRelated.Player;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Stream;
@@ -10,6 +12,8 @@ public class Prompts {
     private String genderCode;
 
     private final Stream<String> validCommands = Stream.of("start","load","quit");
+
+    private String currentCommand = "null";
 
     private String State;
 
@@ -40,6 +44,12 @@ public class Prompts {
         this.genderCode = scanner.nextLine();
     }
 
+    public void nextMove(Player player){
+        System.out.println("What will you do next "+player.name());
+        this.currentCommand = scanner.nextLine();
+
+    }
+
 
     public String getGenderCode() {
         return genderCode;
@@ -51,5 +61,9 @@ public class Prompts {
 
     public String getState() {
         return State;
+    }
+
+    public String getCurrentCommand() {
+        return currentCommand;
     }
 }

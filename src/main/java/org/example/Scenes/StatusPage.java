@@ -26,6 +26,12 @@ public class StatusPage implements ConsolePages {
         populateFrame();
     }
 
+    public void updateState(Player player){
+        this.player =player;
+        populateFrame();
+
+    }
+
     private void populateFrame(){
         menu.addTextElement(name,"Name: "+ player.name(),130,40,100,40);
         menu.addTextElement(gender,"Gender: "+ player.getgender().DisplayGender(),130,100,100,40);

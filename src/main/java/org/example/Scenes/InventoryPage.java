@@ -46,4 +46,9 @@ public class InventoryPage implements ConsolePages {
 
     }
 
+    @Override
+    public void updateState(Player player) {
+
+    }
+
 }

@@ -37,6 +37,10 @@ public class Stats {
         return attack;
     }
 
+    public void setAttack(offenseRating attack) {
+        this.attack = attack;
+    }
+
     public playerLevel getLevel() {
         return level;
     }

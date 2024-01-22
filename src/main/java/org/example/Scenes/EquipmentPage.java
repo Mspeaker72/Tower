@@ -14,4 +14,9 @@ public class EquipmentPage implements ConsolePages{
     public void displayPage() {
 
     }
+
+    @Override
+    public void updateState(Player player) {
+
+    }
 }

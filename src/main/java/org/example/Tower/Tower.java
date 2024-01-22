@@ -19,7 +19,7 @@ public class Tower implements Towers {
 
     public Tower(Player player){
         this.player = player;
-        this.floor = new Floor();
+        this.floor = new Floor(player);
         this.statusPage = new StatusPage(player);
         this.dice = new Dice();
     }
@@ -33,21 +33,39 @@ public class Tower implements Towers {
     }
 
 
-
-
     @Override
     public Floor getFloor() {
         return this.floor;
     }
 
     @Override
-    public void PlayerStatus() {
+    public void playerStatus() {
+
+        statusPage.updateState(player);
         statusPage.displayPage();
+    }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    @Override
+    public void execute(String currentCommand) {
+        switch (currentCommand){
+            case  "roll":
+                walk();
+                break;
+
+            case "status":
+                playerStatus();
+                break;
+        }
     }
 
     @Override
     public void walk() {
         this.floor.step( this.dice.rollDice());
         this.floor.update();
+        this.player =this.floor.getPlayerState();
     }
 }

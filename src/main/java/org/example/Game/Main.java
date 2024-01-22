@@ -24,12 +24,10 @@ public class Main {
         }
 //      Constructor will change after saving feature is added
         Tower tower = new Tower(game.initializePlayer(game.getPrompt().getState()));
-        tower.PlayerStatus();
         // Commands will begin here
-        for(int i = 0;i<=6;i++){
-            tower.walk();
+        while(!game.getPrompt().getCurrentCommand().equals("quit")) {
+            game.getPrompt().nextMove(tower.getPlayer());
+            tower.execute(game.getPrompt().getCurrentCommand());
         }
-
-
         }
     }

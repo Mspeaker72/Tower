@@ -1,5 +1,7 @@
 package org.example.Tower;
 
+import org.example.CharacterRelated.Player;
+
 public interface Towers {
 
 
@@ -14,12 +16,15 @@ public interface Towers {
 public Floor getFloor();
 
 
-public void PlayerStatus();
+public void playerStatus();
 
 
 public void walk();
 
+public Player getPlayer();
 
+
+    void execute(String currentCommand);
 }
 
 
