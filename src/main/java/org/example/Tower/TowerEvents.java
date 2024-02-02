@@ -4,6 +4,8 @@ import org.example.CharacterRelated.Player;
 import org.example.CombatRelated.offenseRating;
 
 public class TowerEvents implements Encounter{
+    private Battle battle = new Battle();
+
     @Override
     public Player wellSpringOfLife(Player player) {
 
@@ -18,14 +20,14 @@ public class TowerEvents implements Encounter{
 
     @Override
     public Player RandomBattle(Player player , Floor floor) {
-        System.out.println("battling");
-        return player;
+        battle.battling(player,floor);
+        return battle.result();
     }
 
     @Override
     public Player trap(Player player) {
         System.out.println("you have been hurt by spikes");
-        player.getStats().getHp().TakeDamage(5);
+        player.getStats().getHp().TakeDamage(2);
         return player;
 
     }

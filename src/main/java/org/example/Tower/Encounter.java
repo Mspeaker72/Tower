@@ -5,6 +5,8 @@ import org.example.CharacterRelated.Player;
 public interface Encounter {
 
 
+
+
     public Player wellSpringOfLife(Player player);
 
     public  Player  RandomBattle(Player player , Floor floor);

@@ -29,5 +29,6 @@ public class Main {
             game.getPrompt().nextMove(tower.getPlayer());
             tower.execute(game.getPrompt().getCurrentCommand());
         }
+        System.exit(0);
         }
     }
