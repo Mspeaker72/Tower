@@ -32,6 +32,7 @@ public class InventoryPage implements ConsolePages {
 
     public  void displayPage(){
 
+
         for(Item item: player.getInventory().getInventory().keySet()){
             inventoryList.add(new String[] {item.DisplayString(), String.valueOf(item.getQuantity())});
         }
@@ -48,7 +49,8 @@ public class InventoryPage implements ConsolePages {
 
     @Override
     public void updateState(Player player) {
-
+        inventoryList.clear();
+        this.player = player;
     }
 
 }

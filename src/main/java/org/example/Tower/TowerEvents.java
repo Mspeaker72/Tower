@@ -4,16 +4,19 @@ import org.example.CharacterRelated.Player;
 import org.example.CombatRelated.offenseRating;
 
 public class TowerEvents implements Encounter{
-    private Battle battle = new Battle();
+    private final Battle battle = new Battle();
 
     @Override
     public Player wellSpringOfLife(Player player) {
+        player.getStats().getAttack().updateOffensivePower(
+                player.getStats().getAttack().getOffensivePower()+1);
+        player.getStats().getDefence().setDefensePower(
+                player.getStats().getDefence().getDefensePower()+1);
+        player.getStats().getHp().setMaxHp(
 
-        offenseRating atk = player.getStats().getAttack().
-                updateOffensivePower(player.getStats().
-                        getAttack().getOffensivePower()+1);
-        player.getStats().setAttack(atk);
-        System.out.println("healing");
+                player.getStats().getHp().getMaxHp()+5);
+        System.out.println("Drank from the well spring ");
+
         return player;
 
     }
@@ -33,14 +36,11 @@ public class TowerEvents implements Encounter{
     }
 
     public Player occurrence(int number, Player player, Floor floor){
-        switch (number){
-            case 0:
-                return wellSpringOfLife(player);
-            case 1:
-                return RandomBattle(player,floor);
-            case 2:
-                return trap(player);
-        }
-        return player;
+        return switch (number) {
+            case 0 -> wellSpringOfLife(player);
+            case 1 -> RandomBattle(player, floor);
+            case 2 -> trap(player);
+            default -> player;
+        };
     }
 }

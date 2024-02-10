@@ -1,7 +1,7 @@
 package org.example.Tower;
-
-
 import org.example.CharacterRelated.Player;
+import org.example.InventoryRelated.Potion;
+import org.example.Scenes.InventoryPage;
 import org.example.Scenes.StatusPage;
 
 public class Tower implements Towers {
@@ -12,6 +12,8 @@ public class Tower implements Towers {
 
     private StatusPage statusPage;
 
+    private InventoryPage inventoryPage;
+
     private Dice dice;
 
 
@@ -21,6 +23,7 @@ public class Tower implements Towers {
         this.player = player;
         this.floor = new Floor(player);
         this.statusPage = new StatusPage(player);
+        this.inventoryPage = new InventoryPage(player);
         this.dice = new Dice();
     }
 
@@ -28,6 +31,7 @@ public class Tower implements Towers {
         this.player = player;
         this.floor = floor;
         this.statusPage = new StatusPage(player);
+        this.inventoryPage = new InventoryPage(player);
         this.dice = new Dice();
 
     }
@@ -59,6 +63,21 @@ public class Tower implements Towers {
             case "status":
                 playerStatus();
                 break;
+
+            case "i":
+                displayInventory();
+                break;
+
+            case "p":
+                // create method to check if potions exist
+                Potion potion = player.getInventory().drinkPotion();
+                player.getStats().getHp().Heal(potion);
+                player.getInventory().useItem(potion);
+
+
+
+
+
         }
     }
 
@@ -67,5 +86,10 @@ public class Tower implements Towers {
         this.floor.step( this.dice.rollDice());
         this.floor.update();
         this.player =this.floor.getPlayerState();
+    }
+
+    private void displayInventory (){
+        this.inventoryPage.updateState(this.player);
+        this.inventoryPage.displayPage();
     }
 }

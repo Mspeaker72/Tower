@@ -20,8 +20,18 @@ public class hitPoints {
         return MaxHp;
     }
 
+    public void setMaxHp(int maxHp) {
+        MaxHp = maxHp;
+    }
+
     public void Heal(Potion potion){
-        this.Hp+=potion.getStrength();
+
+        if(this.Hp+potion.getStrength()<=getMaxHp()){
+            this.Hp+= this.Hp+potion.getStrength();
+        }else{
+            this.Hp = getMaxHp();
+        }
+
     }
 
     public hitPoints(){
